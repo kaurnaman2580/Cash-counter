@@ -1,0 +1,70 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+h2, h3, h4 {
+  color: #333;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+input, select {
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 300px;
+}
+
+button {
+  background-color: #0077cc;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+button.secondary {
+  background: #999;
+}
+
+.form-section, .summary {
+  margin-top: 25px;
+}
+
+#historyList {
+  max-height: 200px;
+  overflow-y: auto;
+  background: #f8f8f8;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
