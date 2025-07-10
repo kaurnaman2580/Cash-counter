@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cash Counter Tracker</title>
+
+  <!-- Manifest and Icon -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="cashregister12.png" type="image/png" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="login" class="card">
+    <h2>Who is at the Cash Counter?</h2>
+    <button onclick="login('Manpreet Singh')">Manpreet Singh</button>
+    <button onclick="login('Namanpreet Kaur')">Namanpreet Kaur</button>
+    <button onclick="login('Keerat Bindra')">Keerat Bindra</button>
+  </div>
+
+  <div id="app" style="display:none;" class="card">
+    <h2>Operator: <span id="operatorName"></span></h2>
+
+    <div class="form-section">
+      <h3>💰 Set or Update Initial Cash Total</h3>
+      <label>Current Cash Total: ₹ <input type="number" id="initialCash" /> 
+        <button onclick="updateInitialCash()">Update</button>
+      </label>
+    </div>
+
+    <p style="margin-top: 10px;">Live Total: ₹<span id="cashTotal">0</span></p>
+
+    <div class="form-section">
+      <h3>➕➖ Add / Subtract Cash</h3>
+      <label>Amount: ₹ <input type="number" id="amount"></label><br>
+      <label>Type:
+        <select id="type">
+          <option value="in">Cash In</option>
+          <option value="out">Cash Out</option>
+        </select>
+      </label><br>
+      <label>Reason: <input type="text" id="reason"></label><br>
+      <h4>Notes Added</h4>
+      <div id="notesIn"></div>
+      <h4>Notes Removed</h4>
+      <div id="notesOut"></div>
+      <button onclick="submitTransaction()">Submit</button>
+    </div>
+
+    <div class="summary">
+      <h3>📋 Cash Register Summary</h3>
+      <ul id="cashBreakdown"></ul>
+    </div>
+
+    <button onclick="showHistory()" class="secondary">📜 View History</button>
+    <button onclick="resetApp()" class="secondary">🔄 Switch Operator</button>
+
+    <div id="history" class="form-section" style="display:none;">
+      <h3>📜 Transaction History</h3>
+      <ul id="historyList"></ul>
+    </div>
+  </div>
+
+  <!-- JS Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
