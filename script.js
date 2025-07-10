@@ -97,7 +97,9 @@ async function submitTransaction() {
   localStorage.setItem("transactionHistory", JSON.stringify(history));
 
   try {
-    await fetch(`${BACKEND_URL}/api/transaction`, {
+await fetch("https://your-backend-url.onrender.com/api/transaction", ...)
+
+     {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
